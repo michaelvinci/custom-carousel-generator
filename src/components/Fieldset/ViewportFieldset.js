@@ -24,43 +24,41 @@ const ViewportFieldset = (props) => {
       />
 
   return (
-    <FieldsetAccordion heading="Viewport">
+    <FieldsetAccordion heading="Viewport" id="viewport-settings">
       <div className="fieldset__group">
-      <FormControlGroup>
-        {viewportWidth}
-        <FormControl
-          type="select"
-          id="widthUnits"
-          value={props.widthUnits}
-          handleChange={props.handleChange}
-          options={['%', 'px']}
-          styles="input-group__width-unit"
-        />
-        <FormControl
-          type="range"
-          id="widthRange"
-          name="percentWidth"
-          min="10" max="100" step="1"
-          value={props.percentWidth}
-          handleChange={props.handleChange}
-          styles={props.widthUnits === 'px' ? 'input-group--sub-field disabled' : 'input-group--sub-field'}
-          isDisabled={props.widthUnits === 'px' ? true : null}
-        />
-      </FormControlGroup>
-      <FormControlGroup>
-        <FormControl
-          type="select"
-          id="aspectRatio"
-          label="Aspect Ratio"
-          options={['4:3', '3:2', '1:1', '16:9', '10:3', '3:4', '2:3']}
-          value={props.aspectRatio}
-          handleChange={props.updateAspectRatio}
-        />
-      </FormControlGroup>
+        <FormControlGroup>
+          {viewportWidth}
+          <FormControl
+            type="select"
+            id="widthUnits"
+            value={props.widthUnits}
+            handleChange={props.handleChange}
+            options={['%', 'px']}
+            styles="input-group__width-unit"
+          />
+          <FormControl
+            type="range"
+            id="widthRange"
+            name="percentWidth"
+            min="10" max="100" step="1"
+            value={props.percentWidth}
+            handleChange={props.handleChange}
+            styles={props.widthUnits === 'px' ? 'input-group--sub-field disabled' : 'input-group--sub-field'}
+            isDisabled={props.widthUnits === 'px' ? true : null}
+          />
+        </FormControlGroup>
+        <FormControlGroup>
+          <FormControl
+            type="select"
+            id="aspectRatio"
+            label="Aspect Ratio"
+            options={['4:3', '3:2', '1:1', '16:9', '10:3', '3:4', '2:3']}
+            value={props.aspectRatio}
+            handleChange={props.updateAspectRatio}
+          />
+        </FormControlGroup>
       </div>
-
       <hr className="fieldset__divider"/>
-
       <div className="fieldset__group">
         <FormControlGroup>
           <FormControl
@@ -72,13 +70,13 @@ const ViewportFieldset = (props) => {
           />
         </FormControlGroup>
         <FormControlGroup isDisabled={!props.viewportBorder}>
-        <FormControl
-          type="color"
-          id="viewportBorderColor"
-          value={props.viewportBorderColor}
-          handleChange={props.handleChange}
-          isDisabled={!props.viewportBorder}
-        />
+          <FormControl
+            type="color"
+            id="viewportBorderColor"
+            value={props.viewportBorderColor}
+            handleChange={props.handleChange}
+            isDisabled={!props.viewportBorder}
+          />
         </FormControlGroup>
         <FormControlGroup isDisabled={!props.viewportBorder}>
           <FormControl
@@ -93,9 +91,7 @@ const ViewportFieldset = (props) => {
           />
         </FormControlGroup>
       </div>
-
       <hr className="fieldset__divider"/>
-
       <div className="fieldset__group">
         <FormControlGroup>
           <FormControl
@@ -117,12 +113,8 @@ const ViewportFieldset = (props) => {
             handleChange={props.handleChange}
           />
         </FormControlGroup>
-
-
       </div>
-
     </FieldsetAccordion>
-
   );
 }
 

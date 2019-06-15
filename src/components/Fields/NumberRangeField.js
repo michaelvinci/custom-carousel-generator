@@ -18,6 +18,7 @@ const NumberRangeField = (props) => {
         max={props.max}
         step={props.step}
         disabled={props.isDisabled}
+        tabIndex={props.tabIndex}
       />
       {unit}
     </>

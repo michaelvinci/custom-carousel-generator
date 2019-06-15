@@ -5,8 +5,7 @@ import FormControl from '../FormControl/FormControl';
 
 const ImageFieldset = (props) => {
   return (
-    <FieldsetAccordion heading="Image">
-
+    <FieldsetAccordion heading="Image" id="image-settings">
       <div className="fieldset__group">
         <FormControlGroup>
           <FormControl
@@ -74,7 +73,6 @@ const ImageFieldset = (props) => {
           />
         </FormControlGroup>
       </div>
-
     </FieldsetAccordion>
   );
 }

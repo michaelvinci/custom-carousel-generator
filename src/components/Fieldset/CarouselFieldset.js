@@ -4,7 +4,7 @@ import FormControlGroup from '../FormControl/FormControlGroup';
 import FormControl from '../FormControl/FormControl';
 
 const CarouselFieldset = (props) => (
-  <FieldsetAccordion heading="Carousel">
+  <FieldsetAccordion heading="Carousel" id="carousel-settings">
     <div className="fieldset__group">
       <FormControlGroup>
         <FormControl
@@ -19,9 +19,7 @@ const CarouselFieldset = (props) => (
         <span className="fieldset__description">A unique string used as html ID for Carousel instance</span>
       </div>
     </div>
-
     <hr className="fieldset__divider"/>
-
     <div className="fieldset__group">
       <FormControlGroup>
         <FormControl

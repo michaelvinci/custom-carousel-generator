@@ -13,6 +13,7 @@ const ColorField = (props) => {
         value={props.value}
         onChange={props.handleChange}
         disabled={props.isDisabled}
+        tabIndex={props.tabIndex}
       />
     </>
   );

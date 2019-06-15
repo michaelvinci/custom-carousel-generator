@@ -5,7 +5,7 @@
   min-width: 275px;
   margin-right: 3%;
   font-size: 16px;
-  
+
   @include respond(tab-port) {
     max-width: none;
     width: 100%;
@@ -27,5 +27,9 @@
     &--space {
       justify-content: space-between;
     }
+  }
+  
+  & *:focus {
+    outline: 1px solid orangered;
   }
 }

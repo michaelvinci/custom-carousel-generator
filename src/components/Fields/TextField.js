@@ -14,6 +14,7 @@ const TextField = (props) => {
         value={props.value}
         placeholder={props.placeholder}
         onChange={props.handleChange}
+        tabIndex={props.tabIndex}
       />
       {unit}
     </>

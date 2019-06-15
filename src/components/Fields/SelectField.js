@@ -20,6 +20,7 @@ const SelectField = (props) => {
         value={props.value}
         disabled={props.isDisabled}
         onChange={props.handleChange}
+        tabIndex={props.tabIndex}
       >
       {renderOptions()}
       </select>
