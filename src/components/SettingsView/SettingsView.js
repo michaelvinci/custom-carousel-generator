@@ -1,9 +1,16 @@
 import React from 'react';
+import SettingsForm from '../SettingsForm/SettingsForm';
+import FixedPanel from '../Fieldset/Fieldset';
+
 
 class SettingsView extends React.Component {
+
   render() {
     return (
-      <div>Settings Content</div>
+      <div className="settings-view">
+        <FixedPanel />
+        <SettingsForm />
+      </div>
     );
   }
 }
