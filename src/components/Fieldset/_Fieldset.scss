@@ -10,8 +10,12 @@
   }
 
   &__legend {
-    width: 96%;
-    margin: 0 auto;
+    margin-left: 2%;
+
+    &--accordion {
+      width: 96%;
+      margin: 0 auto;
+    }
 
     &-flexwrap {
       display: flex;

@@ -17,7 +17,7 @@ const FieldsetAccordion = (props) => {
 
   return (
     <fieldset className="fieldset">
-      <legend className="fieldset__legend">
+      <legend className="fieldset__legend--accordion">
         <div className="fieldset__legend-flexwrap">
           <h2 className="fieldset__heading">{props.heading}</h2>
           <hr className="fieldset__legend-hr" />

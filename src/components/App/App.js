@@ -30,12 +30,13 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <>
         <Header activeTab={this.state.activeTab} onTabChange={this.onTabChange} />
         <main>
-          {this.state.activeTab === "settingsTab" ? <SettingsView className="settings-view"/> : <SourceCodeView />}
+          <SettingsView visibility={this.state.activeTab === "settingsTab" ? '' : 'removed'}/>
+          <SourceCodeView visibility={this.state.activeTab === "settingsTab" ? 'removed' : ''}/>
         </main>
-      </div>
+      </>
     );
   }
 }

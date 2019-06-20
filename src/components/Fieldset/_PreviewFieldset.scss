@@ -1,0 +1,57 @@
+.preview {
+  flex: 1;
+  margin: 0;
+
+  @include respond(tab-port) {
+    flex: none;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__wrapper {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__sub-heading {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0 3%;
+  }
+
+  &__search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    min-width: 48vw;
+    padding: 10px 3%;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      width: 95%;
+    }
+  }
+
+  &__search-input {
+    width: 100%;
+    max-width: 250px;
+    padding: 2px;
+    margin: 3% 4%;
+  }
+
+  &__submit-btn {
+    padding: 2px 10px;
+    margin-left: 20px;
+    background-color: $settings-dark;
+    color: $offwhite;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $settings-darker;
+    }
+  }
+}

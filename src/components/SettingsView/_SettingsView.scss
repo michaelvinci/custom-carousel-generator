@@ -1,8 +1,27 @@
-.settings-view {
+.settings-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   color: $offwhite;
+  font-size: 16px;
+
+  & *:focus {
+    outline: 1px solid orangered;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    min-width: 275px;
+    margin-right: 3%;
+
+    @include respond(tab-port) {
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
 }

@@ -39,4 +39,11 @@ html {
 
 body {
   font-family: sans-serif;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
