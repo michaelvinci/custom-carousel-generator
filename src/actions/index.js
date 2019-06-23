@@ -39,7 +39,7 @@ export const fetchImages = (query, quantity) => {
   return async (dispatch) => {
     const response = await axios({
       method: 'GET',
-      url: 'https://feverdreamdesigns.com/carousel-test/api-call.php',
+      url: 'https://feverdreamdesigns.com/api-call.php',
       params: {query: query, per_page: quantity}
     });
 
