@@ -15,7 +15,6 @@ class ViewportFieldset extends React.Component {
     const name = e.target.name;
     const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
     let props = {};
-
     switch (name) {
       case 'pixelWidth':
         let numOnly = value.match(/[0-9]/g);
@@ -62,11 +61,6 @@ class ViewportFieldset extends React.Component {
 
   updateAspectRatio() {
     this.props.updateCarouselStyle('viewport', 'paddingBottom', `${parseFloat(((100 * this.props.y) / this.props.x).toFixed(2), 10)}%`);
-    // setTimeout(() => {
-    //   this.awaitImageLoading();
-    //   this.updateViewportRounding();
-    // }, 1);
-
     this.props.aspectRatio === '4:3'
     ? this.props.removeInstanceOption('aspectRatio')
     : this.props.addInstanceOption({ aspectRatio: this.props.aspectRatio });
@@ -96,6 +90,13 @@ class ViewportFieldset extends React.Component {
       this.props.updateCarouselStyle('viewportWrapper', 'borderRadius', roundingValue)
     } else {
       this.props.updateCarouselStyle('viewportWrapper', 'borderRadius', `${this.props.viewportRounding}%`)
+    }
+  }
+
+  componentDidMount() {
+    if (window.innerWidth <= 600) {
+      this.props.updateCarouselStyle('viewportWrapper', 'borderRadius', `${this.props.viewportRounding}%`)
+      this.props.updateCarouselStyle('carousel', 'width', `${this.props.percentWidth}${this.props.widthUnits}`);
     }
   }
 

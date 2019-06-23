@@ -14,7 +14,7 @@ class ControlsFieldset extends React.Component {
   handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
-
+    
     this.currentField = name;
     this.props.updateSettings({ [name]: value });
   }
@@ -32,6 +32,13 @@ class ControlsFieldset extends React.Component {
       case 'indicatorActiveColor':
       case 'indicatorInactiveColor':
         this.updateIndicatorBar();
+        if (this.props.indicatorBar && this.props.indicatorBarLocation !== 'interior') {
+          this.props.addInstanceOption({ indicatorBar: this.props.indicatorBarLocation });
+        } else if (!this.props.indicatorBar) {
+          this.props.addInstanceOption({ indicatorBar: 'off' });
+        } else {
+          this.props.removeInstanceOption('indicatorBar');
+        }
         break;
       case 'arrowBackground':
       case 'arrowBackgroundVisibility':

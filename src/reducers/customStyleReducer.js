@@ -30,7 +30,7 @@ cssRulePairs.forEach((val) => {
   [initialState[val.name]] = cssRules.filter(el => el.selectorText === `#my-carousel${val.dom}`);
 });
 
-const carouselStyleReducer = (rules = initialState, action) => {
+const customStyleReducer = (rules = initialState, action) => {
   let newState;
   switch (action.type) {
     case 'UPDATE_STYLE':
@@ -48,4 +48,4 @@ const carouselStyleReducer = (rules = initialState, action) => {
   }
 }
 
-export default carouselStyleReducer;
+export default customStyleReducer;

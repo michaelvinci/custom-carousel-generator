@@ -6,7 +6,6 @@ import SelectField from '../Fields/SelectField';
 import ColorField from '../Fields/ColorField';
 
 class FormControl extends React.Component {
-
   renderField() {
     const {type, ...fieldProps} = this.props;
     switch (type) {
@@ -27,7 +26,6 @@ class FormControl extends React.Component {
   }
 
   render() {
-
     return (
       <>
         {this.renderField()}

@@ -8,7 +8,7 @@
   font-size: 16px;
 
   & *:focus {
-    outline: 1px solid orangered;
+    outline: 1px solid $secondary;
   }
 
   &__group {

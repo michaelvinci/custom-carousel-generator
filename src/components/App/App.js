@@ -1,51 +1,39 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import SettingsView from '../SettingsView/SettingsView';
 import SourceCodeView from '../SourceCodeView/SourceCodeView';
 
-import { updateCarouselStyle, updateNamespace } from '../../actions';
-
 class App extends React.Component {
-
-  state= { activeTab: 'settingsTab' }
+  constructor(props) {
+    super(props);
+    this.state= { activeTab: 'settingsTab' }
+    this.cssRules = [];
+  }
 
   onTabChange = (id) => {
     this.setState({ activeTab: id})
   }
 
-  clickTest = (e) => {
-    this.props.updateCarouselStyle('arrowPath', 'stroke', 'green');
-  }
-
-  updateInputValue = (e) => {
-    const namespace = e.target.value ? e.target.value : 'my-carousel';
-    this.props.updateNamespace(namespace);
+  cacheCssRules() {
+    const [stylesheet] = [...document.styleSheets].filter(val => val.title === 'carousel');
+    this.cssRules = [...stylesheet.cssRules || stylesheet.rules];
   }
 
   componentDidMount() {
-    // this.props.cacheCssRules('my-carousel');
+    this.cacheCssRules()
   }
 
   render() {
-
     return (
       <>
         <Header activeTab={this.state.activeTab} onTabChange={this.onTabChange} />
         <main>
           <SettingsView visibility={this.state.activeTab === "settingsTab" ? '' : 'removed'}/>
-          <SourceCodeView visibility={this.state.activeTab === "settingsTab" ? 'removed' : ''}/>
+          <SourceCodeView visibility={this.state.activeTab === "settingsTab" ? 'removed' : ''} cssCode={this.cssRules} />
         </main>
       </>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-
-  return {
-
-  }
-}
-
-export default connect(mapStateToProps, { updateCarouselStyle, updateNamespace })(App);
+export default App;

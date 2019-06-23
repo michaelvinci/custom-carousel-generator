@@ -1,0 +1,40 @@
+.source-code {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  &__view {
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  &__block {
+    position: relative;
+    background-color: $offgray;
+    border: 2px solid $settings-darker;
+    border-radius: 4px;
+    margin: 0 40px 80px;
+    padding: 20px;
+    max-height: 500px;
+    overflow: auto;
+    tab-size: 4;
+
+    @include respond(phone) {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__heading {
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 54px;
+    padding: 0 6px;
+    color: $offwhite;
+
+    @include respond(phone) {
+      margin-left: 0;
+    }
+  }
+}

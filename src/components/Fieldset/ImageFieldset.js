@@ -23,6 +23,9 @@ class ImageFieldset extends React.Component {
     switch(currentField) {
       case 'imageSize':
         this.awaitImageLoading();
+        this.props.imageSize === 'contain'
+          ? this.props.removeInstanceOption('imageSize')
+          : this.props.addInstanceOption({ imageSize: this.props.imageSize});
         break;
       case 'endCapColor':
         this.updateEndCaps();
@@ -34,6 +37,9 @@ class ImageFieldset extends React.Component {
         break;
       case 'transitionStyle':
         this.updateTransitionStyle();
+        this.props.transitionStyle === 'horizontal'
+          ? this.props.removeInstanceOption('transition')
+          : this.props.addInstanceOption({ transition: this.props.transitionStyle});
         break;
       default:
     }
@@ -131,10 +137,6 @@ class ImageFieldset extends React.Component {
         this.props.updateCarouselStyle('slideQueue', 'transform', 'translate(100%, 0)');
         this.props.updateCarouselStyle('slideQueue', 'opacity', '');
     }
-
-    this.props.transitionStyle === 'horizontal'
-    ? this.props.removeInstanceOption('transition')
-    : this.props.addInstanceOption({ transition: this.props.transitionStyle});
   }
 
   shouldComponentUpdate(nextProps) {

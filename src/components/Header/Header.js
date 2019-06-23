@@ -1,11 +1,10 @@
 import React from 'react';
 
 class Header extends React.Component {
-
   renderTabs() {
     const tabs = [
-      {id: 'settingsTab', text: 'Settings' },
-      {id: 'sourceCodeTab', text: 'Source Code'}
+      {id: 'settingsTab', text: 'Settings', controls: 'settingsView' },
+      {id: 'sourceCodeTab', text: 'Source Code', controls: 'sourceCodeView'}
     ]
     return tabs.map((tab) => {
       return (
@@ -17,8 +16,8 @@ class Header extends React.Component {
             id={tab.id}
             onClick={this.props.onTabChange.bind(this, tab.id)}
             role="tab"
-            aria-selected="true"
-            aria-controls="settings-panel"
+            aria-selected={this.props.activeTab === tab.id}
+            aria-controls={tab.controls}
             className={this.props.activeTab === tab.id ? 'tab-nav__btn tab-nav__btn--active' : 'tab-nav__btn'}>{tab.text}
           </button>
         </li>
@@ -28,7 +27,8 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="banner">
+        <h1 className="banner__heading">Custom Carousel Generator</h1>
         <nav className="tab-nav">
           <ul role="tablist" className="tab-nav__list">
             {this.renderTabs()}
