@@ -1,6 +1,6 @@
 .input-group {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   margin-top: 14px;
   margin-left: 22px;
   transition: opacity 0.2s;
@@ -24,6 +24,7 @@
   }
 
   &__label {
+    align-self: center;
     margin-right: 12px;
     white-space: nowrap;
   }
@@ -33,6 +34,7 @@
   }
 
   &__width-unit {
+    width: 80px;
     margin-left: 4px;
     align-self: stretch;
   }
