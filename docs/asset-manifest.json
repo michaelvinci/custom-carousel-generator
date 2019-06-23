@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/carousel-test/static/css/main.186d8f59.chunk.css",
+    "main.js": "/carousel-test/static/js/main.d0179313.chunk.js",
+    "main.js.map": "/carousel-test/static/js/main.d0179313.chunk.js.map",
+    "runtime~main.js": "/carousel-test/static/js/runtime~main.ea77ea90.js",
+    "runtime~main.js.map": "/carousel-test/static/js/runtime~main.ea77ea90.js.map",
+    "static/js/2.fffffdbe.chunk.js": "/carousel-test/static/js/2.fffffdbe.chunk.js",
+    "static/js/2.fffffdbe.chunk.js.map": "/carousel-test/static/js/2.fffffdbe.chunk.js.map",
+    "index.html": "/carousel-test/index.html",
+    "precache-manifest.53e1e9c2c6183679ecaef154be90be81.js": "/carousel-test/precache-manifest.53e1e9c2c6183679ecaef154be90be81.js",
+    "service-worker.js": "/carousel-test/service-worker.js",
+    "static/css/main.186d8f59.chunk.css.map": "/carousel-test/static/css/main.186d8f59.chunk.css.map",
+    "static/media/index.scss": "/carousel-test/static/media/brushed_metal_dark_med_hd.de44ac7b.jpg"
+  }
+}
