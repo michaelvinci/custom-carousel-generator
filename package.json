@@ -2,7 +2,7 @@
   "name": "custom-carousel-generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.feverdreamdesigns.com/carousel-test",
+  "homepage": "https://michaelvinci.github.io/custom-carousel-generator/",
   "dependencies": {
     "axios": "^0.19.0",
     "lodash.clonedeep": "^4.5.0",
