@@ -2,6 +2,7 @@
 
 The Custom Carousel Generator is a web app that enables users to create and preview fully customizable image carousels, and simply copy the outputted code into their projects.
 
+Visit the web app here: https://michaelvinci.github.io/custom-carousel-generator/
 
 ### Usage
 
