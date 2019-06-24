@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/custom-carousel-generator/static/css/main.2bd526f5.chunk.css",
+    "main.css": "/custom-carousel-generator/static/css/main.c8fa5b9a.chunk.css",
     "main.js": "/custom-carousel-generator/static/js/main.c1901f5a.chunk.js",
     "main.js.map": "/custom-carousel-generator/static/js/main.c1901f5a.chunk.js.map",
     "runtime~main.js": "/custom-carousel-generator/static/js/runtime~main.6289f145.js",
@@ -8,9 +8,9 @@
     "static/js/2.fffffdbe.chunk.js": "/custom-carousel-generator/static/js/2.fffffdbe.chunk.js",
     "static/js/2.fffffdbe.chunk.js.map": "/custom-carousel-generator/static/js/2.fffffdbe.chunk.js.map",
     "index.html": "/custom-carousel-generator/index.html",
-    "precache-manifest.93605202ad1f87473adb7f5def4ecf24.js": "/custom-carousel-generator/precache-manifest.93605202ad1f87473adb7f5def4ecf24.js",
+    "precache-manifest.6cff526e49835a03caf376cd2781e553.js": "/custom-carousel-generator/precache-manifest.6cff526e49835a03caf376cd2781e553.js",
     "service-worker.js": "/custom-carousel-generator/service-worker.js",
-    "static/css/main.2bd526f5.chunk.css.map": "/custom-carousel-generator/static/css/main.2bd526f5.chunk.css.map",
+    "static/css/main.c8fa5b9a.chunk.css.map": "/custom-carousel-generator/static/css/main.c8fa5b9a.chunk.css.map",
     "static/media/index.scss": "/custom-carousel-generator/static/media/brushed_metal_dark_med_hd.de44ac7b.jpg"
   }
 }
